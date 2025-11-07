@@ -57,3 +57,32 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Tailwind CSS
+
+This project has been configured to use Tailwind CSS for utility-first styling.
+
+What I changed:
+- Added `tailwindcss`, `postcss`, and `autoprefixer` to `devDependencies` in `package.json`.
+- Added `tailwind.config.cjs` and `postcss.config.cjs` at the project root.
+- Added Tailwind directives to `src/styles.css` (@tailwind base; @tailwind components; @tailwind utilities;).
+
+How to use:
+1. Install dependencies (if you haven't already):
+
+```bash
+npm install
+```
+
+2. During builds, Angular's PostCSS pipeline will run Tailwind and produce the final CSS. Use the existing build/serve commands:
+
+```bash
+npm run build
+npm start
+```
+
+3. Add Tailwind utility classes anywhere in your component templates (HTML). The Tailwind config scans `./src/**/*.{html,ts}` by default.
+
+Notes and troubleshooting:
+- If you add new file types or change where templates live, update `content` in `tailwind.config.cjs`.
+- If your editor/linter flags unknown `@tailwind` at-rules, that's expected (Tailwind is applied at build time via PostCSS).
