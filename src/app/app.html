@@ -1,18 +1,18 @@
-<div class="min-h-screen bg-gray-50 flex items-center justify-center p-6">
-  <div class="bg-white w-full max-w-md rounded-xl shadow-lg p-6">
-    <h1 class="text-lg font-semibold text-gray-800 mb-4 text-center">
-      💹 Crypto Lot Size Calculator
+<div class="min-h-screen bg-gray-50 flex items-center justify-center p-4 sm:p-6 safe-top safe-bottom">
+  <div class="bg-white w-full max-w-md rounded-xl shadow-lg p-4 sm:p-6">
+    <h1 class="text-xl sm:text-2xl font-bold text-gray-800 mb-4 text-center">
+      💹 Crypto Lot Calculator
     </h1>
 
     <!-- Mode toggle -->
-    <div class="flex justify-center gap-4 mb-4">
-      <label class="flex items-center gap-1 text-sm text-gray-700">
+    <div class="grid grid-cols-2 gap-2 mb-4">
+      <label class="flex items-center justify-center gap-2 text-sm text-gray-700 bg-gray-50 rounded-lg p-3 hover:bg-gray-100 cursor-pointer">
         <input type="radio" [(ngModel)]="mode" value="price" class="accent-indigo-600" />
-        <span>By Stop-Loss Price</span>
+        <span>By SL Price</span>
       </label>
-      <label class="flex items-center gap-1 text-sm text-gray-700">
+      <label class="flex items-center justify-center gap-2 text-sm text-gray-700 bg-gray-50 rounded-lg p-3 hover:bg-gray-100 cursor-pointer">
         <input type="radio" [(ngModel)]="mode" value="percent" class="accent-indigo-600" />
-        <span>By Stop-Loss %</span>
+        <span>By SL %</span>
       </label>
     </div>
     <!-- Output -->

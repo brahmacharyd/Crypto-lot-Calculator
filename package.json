@@ -7,7 +7,9 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:t-calc": "node dist/t-calc/server/server.mjs"
+    "serve:ssr:t-calc": "node dist/t-calc/server/server.mjs",
+    "build:prod": "ng build --configuration production",
+    "vercel-build": "npm run build:prod && npm run serve:ssr:t-calc"
   },
   "prettier": {
     "printWidth": 100,

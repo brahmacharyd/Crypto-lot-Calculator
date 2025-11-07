@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "dist/t-calc/server/server.mjs",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "dist/t-calc/server/server.mjs"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
+}
